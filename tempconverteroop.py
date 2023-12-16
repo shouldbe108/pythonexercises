@@ -15,4 +15,17 @@ class TemperatureConverter:
     def f_to_c(self, fahrenheit):
         return (fahrenheit - 32)*(5/9)
     
+cnv=TemperatureConverter() #create and instance
 
+type=input("C to F enter A. F to C enter B")
+
+if type=="A":
+    tempv1=float(input("enterC temp"))
+    ctemp=cnv.c_to_f(tempv1)
+    print(str(ctemp)+'C')
+elif type=="B":
+    tempv2=float(input("enterF temp"))
+    ftemp=cnv.f_to_c(tempv2)
+    print(str(ftemp)+'F')
+else: 
+    print("invalid input restart")
